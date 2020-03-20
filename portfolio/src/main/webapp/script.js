@@ -11,18 +11,30 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+ 
 /**
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
+      ['Chandler Bing',
+       'Miranda Bailey', 'Sansa Stark', 'Harvey Specter'];
+ 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
+ 
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+ 
+/**
+ * Uses fetch() to get this content and give it back to the user.
+ */
+function getHello() {
+  fetch('/data').then(response => response.text()).then((data) => {
+    document.getElementById('hello-container').innerText = data;
+  });
+}
+ 
+
