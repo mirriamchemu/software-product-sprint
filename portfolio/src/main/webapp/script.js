@@ -36,5 +36,58 @@ function getHello() {
     document.getElementById('hello-container').innerText = data;
   });
 }
+
+/**
+ * This function fetches the login status of the user.
+ */
+function getLoginStatusUsingArrowFunctions() {
+  fetch('/login').then(response => response.text()).then((quote) => {
+    document.getElementById('quote-container').innerText = quote;
+  });
+}
+
+/**
+ * This function fetches the email address of the user.
+ */
+function getEmailUsingArrowFunctions() {
+  fetch('/data').then(response => response.text()).then((quote) => {
+    document.getElementById('quote-container').innerText = quote;
+  });
+}
+
+/**
+* This function redirects the user to the education page
+*/
+function redirectToEducation() {
+  window.location.href = "education.html";
+}
+
+/**
+* This function redirects the user to the projects page
+*/
+function redirectToProjects() {
+  window.location.href = "projects.html";
+}
+
+/**
+* This function redirects the user to the gallery page
+*/
+function redirectToGallery() {
+  window.location.href = "gallery.html";
+}
+
+/**
+* This function redirects the user to the education page
+*/
+function redirectToConnect() {
+  window.location.href = "connect.html";
+}
+
+/**
+* This function redirects the user to the experience page
+*/
+function redirectToExperience() {
+  window.location.href = "experience.html";
+}
  
 
