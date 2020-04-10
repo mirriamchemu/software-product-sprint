@@ -5,8 +5,12 @@
 }
 
 .content {
-  max-width: 650px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 850px;
+  background-color: #c4c0c0;
+  background-size: cover;
+  background-position: center;
 }
 
 #greeting-container {
@@ -70,12 +74,12 @@ input[type=submit] {
 }
 
 input[type=submit]:hover {
-  background-color: #45a049;
+  background-color: blueviolet;
 }
 
 div {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: #c4c0c0;
   padding: 20px;
 }
 
@@ -96,7 +100,6 @@ div {
 .column {
   float: left;
   width: 50%;
-  padding: 15px;
 }
 
 /* Clear floats after the columns */
@@ -118,6 +121,24 @@ hr {
 width: 100%;
 margin-left: auto;
 margin-right: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html { 
+  background-color: #c4c0c0;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+h1 {
+margin-left: auto;
+margin-right: auto; 
 }
 
 
