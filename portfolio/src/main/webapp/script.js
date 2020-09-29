@@ -11,18 +11,83 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 // See the License for the specific language governing permissions and
 // limitations under the License.
-
+ 
 /**
  * Adds a random greeting to the page.
  */
 function addRandomGreeting() {
   const greetings =
-      ['Hello world!', '¡Hola Mundo!', '你好，世界！', 'Bonjour le monde!'];
-
+      ['Chandler Bing',
+       'Miranda Bailey', 'Sansa Stark', 'Harvey Specter'];
+ 
   // Pick a random greeting.
   const greeting = greetings[Math.floor(Math.random() * greetings.length)];
-
+ 
   // Add it to the page.
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+ 
+/**
+ * Uses fetch() to get this content and give it back to the user.
+ */
+function getHello() {
+  fetch('/data').then(response => response.text()).then((data) => {
+    document.getElementById('hello-container').innerText = data;
+  });
+}
+
+/**
+ * This function fetches the login status of the user.
+ */
+function getLoginStatusUsingArrowFunctions() {
+  fetch('/login').then(response => response.text()).then((quote) => {
+    document.getElementById('quote-container').innerText = quote;
+  });
+}
+
+/**
+ * This function fetches the email address of the user.
+ */
+function getEmailUsingArrowFunctions() {
+  fetch('/data').then(response => response.text()).then((quote) => {
+    document.getElementById('quote-container').innerText = quote;
+  });
+}
+
+/**
+* This function redirects the user to the education page
+*/
+function redirectToEducation() {
+  window.location.href = "education.html";
+}
+
+/**
+* This function redirects the user to the projects page
+*/
+function redirectToProjects() {
+  window.location.href = "projects.html";
+}
+
+/**
+* This function redirects the user to the gallery page
+*/
+function redirectToGallery() {
+  window.location.href = "gallery.html";
+}
+
+/**
+* This function redirects the user to the education page
+*/
+function redirectToConnect() {
+  window.location.href = "connect.html";
+}
+
+/**
+* This function redirects the user to the experience page
+*/
+function redirectToExperience() {
+  window.location.href = "experience.html";
+}
+ 
+
